@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="RO">
+
+<head>
+  <meta charset="utf-8">
+  <meta author="Bejnariu Miruna">
+  <meta keywords="Bar, Bauturi, Terasa, Zeusbar,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    description="ZeusBar este un bar select in care legendele se intalnesc pentru a face istorie. Din anul 2000, ZeusBar aduce împreună băutura bună cu oamenii faini, lăsând amintiri memorabile celor care îi trec pragul. Barul nostru aduce cele mai selecte băuturi din întreaga lume, de la cocktailuri la shoturi, pentru a satisface nevoile orcărui client.">
+  <title>Zeusbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+</head>
+  <style>
+    body {
+      background-color: ivory;
+    }
+
+    p {
+      font-family: 'Source Sans Pro';
+      font-size: 18px;
+      color: rgb(0, 0, 0);
+    }
+
+    h1 {
+      font-size: 72px;
+      color: goldenrod;
+      font-family: 'Bangers';
+      align-items: center;
+    }
+
+    h2 {
+      color: goldenrod;
+      font-family: 'Anton';
+      font-size: 40px;
+
+    }
+
+    h3 {
+      font-size: 26px;
+      font-family: 'Anton';
+      color: ivory;
+    }
+
+    .card-body h3 {
+      color: black;
+    }
+
+    .navbar a {
+      font-size: 36px;
+      color: goldenrod;
+      font-family: 'Bangers';
+    }
+
+    .navbar-nav a {
+      font-family: 'Anton';
+      font-size: 16px;
+    }
+
+    .navbar-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .carousel-inner img {
+      object-fit: cover;
+      height: 32rem;
+    }
+
+    .carusel-hero p {
+      font-size: 72px;
+      color: goldenrod;
+      font-family: 'Bangers';
+      align-items: center;
+    }
+
+    .meniu h3 {
+      color: ivory;
+    }
+
+    .mapouter {
+      position: relative;
+      text-align: right;
+      width: 100%;
+      height: 500px;
+    }
+
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      width: 100%;
+      height: 500px;
+    }
+
+    .gmap_iframe {
+      height: 500px !important;
+    }
+
+    .c-item {
+      height: 480px;
+    }
+
+    .c-img {
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+  </style>
+
+  <body>
+
+
+    <!-- Header -->
+
+
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <p class="navbar-brand">
+            <a class="nav-link" href="index.html">
+              Zeusbar
+            </a>
+          </p>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#povestea">Povestea noastră</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#servicii">Servicii</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#meniu">Meniu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+
+
+    <!-- Carusel -->
+
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="materiale/slider/1.jpg" class="d-block w-100 c-img"
+            alt="Masă de lemn cu o sticlă de băutură și două pahare">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase text-light">Locul în care se nasc cele mai legendare povești</p>
+            <h1 class=" fw-bolder text-capitalize">ZeusBar</h1>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="materiale/slider/2.jpg" class="d-block w-100 c-img"
+            alt="Femeie întinsă pe bar cu un pahar de cocktail în mână">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase text-light">Locul în care se nasc cele mai legendare povești</p>
+            <div class="carusel-hero">
+              <p class=" fw-bolder text-capitalize">ZeusBar</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="materiale/slider/3.jpg" class="d-block w-100 c-img" alt="Dozatoarele de bere de la Zeusbar">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase text-light">Locul în care se nasc cele mai legendare povești</p>
+            <div class="carusel-hero">
+              <p class=" fw-bolder text-capitalize">ZeusBar</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="materiale/slider/4.jpg" class="d-block w-100 c-img"
+            alt="Patru cocktailuri colorate asezate pe o masă">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase text-light">Locul în care se nasc cele mai legendare povești</p>
+            <div class="carusel-hero">
+              <p class=" fw-bolder text-capitalize">ZeusBar</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="materiale/slider/5.jpg" class="d-block w-100 c-img" alt="Rafturile pline de băuturi alcoolice">
+          <div class="carousel-caption top-0 mt-4 ">
+            <p class="mt-5 fs-3 text-uppercase text-light">Locul în care se nasc cele mai legendare poveștie</p>
+            <div class="carusel-hero">
+              <p class=" fw-bolder text-capitalize">ZeusBar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+
+
+    <!-- Rezervare -->
+
+    <div class="container-fluid bg-warning ">
+      <div class="row mx-5 px-5 py-5 ">
+        <div class="col-lg-6 col-sm-12  text-center">
+          <p class="fs-2 text-light">Distracția începe acum!</p>
+        </div>
+        <div class="col-lg-6 col-sm-12 text-center">
+          <a class="btn btn-dark px-4 py-2 " href="#contact" role="button">Fă o rezervare</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Povestea noastră -->
+
+    <div class="container-fluid bg-dark" id="povestea">
+      <div class="row align-items-center  mx-5 py-5 ">
+        <div class="col-lg-7 col-md-12">
+          <h2 class="align-top">Povestea noastră</h2>
+          <p class="lead text-light">Din anul 2000, ZeusBar aduce împreună băutura bună cu oamenii faini, lăsând amintiri
+            memorabile
+            celor care îi trec pragul. Barul nostru aduce cele mai selecte băuturi din întreaga lume, de la cocktailuri la
+            shoturi, pentru a satisface nevoile orcărui client. ZeusBar are un design unicat și modern, bazat pe elemente
+            simple cu detalii aurii, pentru a combina comfortul cu spiritul regal, introducând cu usurință concepte din
+            mitogogia greacă. Evenimentele organizate în cadrul acestui sunt diverisiface, reusind să ajungă la sufletul
+            orcăruia. Pentru că ne dorim ca fiecare client să se simtă important, acestia au posibilitatea să-și lase
+            amprenta în Cartea Legendelor.
+          </p>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <img class="img-fluid" src="materiale/poze_continut/pozabar.jpg" alt="Barul din lemn, aranjat și organizat">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Servicii -->
+
+
+    <div class="container" id="servicii">
+      <div class="row mt-5 mb-3">
+        <hr>
+        <h2 class="text-center mt-5 pt-5">
+          Servicii
+        </h2>
+      </div>
+      </hr>
+      <div class="row mt-3 mb-3">
+        <div class="col-lg-4 col-12 mb-3">
+          <div class="card text-center h-100 bg-warning">
+            <img src="materiale/poze_servicii/bautura.jpg" class="card-img-top"
+              alt="Trei pahare pline cu whiskey, cu câteva cuburi de gheață pe langă">
+            <div class="card-body">
+              <h3 class="card-title">
+                Băuturi personalizate
+              </h3>
+              <p class="card-text">
+                La Pafos Pasta, păstrăm tradiția de a servi cele mai gustoase feluri de
+                mâncare. Alegem ingrediente proaspete, le prelucrăm cu grijă și le servim cu migală așa încât
+                fiecare client să fie mulțumit. Vă propunem o varietate de bucate pregătite perfect de către
+                bucătarii noștri. Ai poftă de paste, pizza, sushi, supă, salată ș.a.m.d? Pafos Pasta e
+                alegerea corectă.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12 mb-3 ">
+          <div class="card text-center position-relative h-100 bg-warning">
+            <img src="materiale/poze_servicii/gustari.jpg" class="card-img-top"
+              alt="Patru oameni care stau la masă pătrată. Pe masă se află trei meniuri de hamburger și o shaorma vegană la farfurie.">
+            <div class="card-body">
+              <h3 class="card-title">
+                Gustări delicioase
+              </h3>
+              <p class="card-text">
+                Nu în ultimul rând, pentru a vă oferi posibilitatea să savurați bucatele și băuturile noastre
+                fără a vă părăsi casa, suntem mândri să anunțăm că Pafos Pasta are livrare. Acum puteți privi
+                serialul preferat împreună cu snack-ul vostru preferat livrat chiar până la ușă. Pentru a afla
+                mai multe detalii cu privire la serviciul de livrare, nu ezitați să ne contactați la numărul de
+                telefon sau pe adresa de email.
+              </p>
+            </div>
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-warning align-middle">
+              NOU!
+            </span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12 mb-3">
+          <div class="card text-center h-100 bg-warning">
+            <img src="materiale/poze_servicii/petreceri.jpg" class="card-img-top"
+              alt="Trei mâini ridicate care ciocnesc shoturi. Pe fundal sunt lumini de club.">
+            <div class="card-body">
+              <h3 class="card-title">
+                Petreceri legendare
+              </h3>
+              <p class="card-text">
+                Deși restaurantul nostru se axează pe varietatea de bucate, avem și o gamă de băuturi care
+                vă vor ridica dispoziția instantaneu. Indiferent dacă e iarnă sau vară, la Pafos Pasta
+                suntem gata să vă servim tot ce vă dorește sufletul (sau stomacul). Printre băuturile pe care
+                vi le putem oferi se numără: cafea, bere, cocktailuri de diferite feluri, ceai, șampanie, cognac e.t.c.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Meniu -->
+
+
+    <div class="container-fluid bg-dark pb-5" id="meniu">
+      <div class="row meniu">
+        <div class="col-12 mx-auto text-center mb-0 mt-5">
+          <hr class="text-light">
+          <h2 class="mt-5">Meniu</h2>
+        </div>
+        <div class="col-12 mx-auto text-center mb-3 mt-0">
+          <p class="text-light">-Cele mai îndrăgite băuturi-</p>
+        </div>
+        <div class="col-12 mt-4 text-center">
+          <img class="img-fluid mb-5" src="materiale/meniu/Cocktails.jpg"
+            alt="Trei cocktailuri colorate. Unul portocaliu, unul galben și unul roșu">
+          <h3>Cocktails</h3>
+          <br>
+        </div>
+        <div class="row d-flex justify-content-evenly">
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Zeus</h4>
+              <p class="card-subtitle mb-2 text-dark">30 lei</p>
+              <p class="card-text">Zeus este un cocktail, marcă originală a barului nostru și este o băutură răcoritoare
+                și delicioasă care se prepară amestecând whisky, cola și frișcă. Băutra este servită rece.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Afrodita</h4>
+              <p class="card-subtitle mb-2 text-dark">20 lei</p>
+              <p class="card-text">Afrodita este un cocktail răcoritor și îndrăzneț. Se prepară amestecând lichior de
+                cireșe, portocale și apă tonică. Lichiorul de cireșe și portocale adaugă un gust dulce-acrișor.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Artemis</h4>
+              <p class="card-subtitle mb-2 text-dark">25 lei</p>
+              <p class="card-text">Artemis este un cocktail energizant și delicios. Se prepară amestecând Jägermeister,
+                redbull și suc de ananas. Jägermeister-ul adaugă un gust puternic și aromat al băuturii, în timp ce
+                redbull-ul și sucul de ananas aduc o notă dulce.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-evenly">
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Hera</h4>
+              <p class="card-subtitle mb-2 text-dark">15 lei</p>
+              <p class="card-text">Hera este un cocktail rafinat și gustos. Se prepară amestecând vodka, triplu sec și
+                suc de cireșe. Vodka aduce o bază puternică băuturii, în timp ce triplu sec și sucul de cireșe aduce o
+                notă dulce-acrișoară.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Heracles</h4>
+              <p class="card-subtitle mb-2 text-dark">22 lei</p>
+              <p class="card-text">Heracles este o băutură puternică și răcoritoare. Se prepară amestecând bere, cola,
+                lichior de cireșe și suc de afine. Berea adaugă o bază aromată băuturii, în timp ce cola, lichiorul de
+                cireșe și sucul de afine completează armonios băutura.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Poseidon</h4>
+              <p class="card-subtitle mb-2 text-dark">18 lei</p>
+              <p class="card-text">Poseidon este o băutură puternică și revigorantă. Se prepară amestecând Gin, apă tonică
+                și suc de struguri. Gin-ul adaugă o bază puternică și aromată băuturii, în timp ce apa tonică completeză
+                gustul rafinat, iar sucul de struguri aduce o notă dulce și răcoritoare.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-4 text-center">
+          <img class="img-fluid mb-5" src="materiale/meniu/shoturicolorate.jpg"
+            alt=" Trei shoturi colorate așezate pe o bar. Shotul Bețivanca este cel albastru, Duracell este verde, iar Tsunami este mov">
+          <h3>Shoturi</h3>
+          <br>
+        </div>
+        <div class="row d-flex justify-content-evenly">
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Bețivanca</h4>
+              <p class="card-subtitle mb-2 text-dark">5 lei</p>
+              <p class="card-text">Bețivanca este un shot puternic și delicios. Se prepară amestecând vodka și lichior de
+                afine. Acest shot este perfect pentru a intra în ritmul petrecerii și a deveni un adevărat party-animal.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Duracell</h4>
+              <p class="card-subtitle mb-2 text-dark">8 lei</p>
+              <p class="card-text">Duracell este un shot energizant. Se prepară amestecând whisky și redbull. Acest shot
+                este numai bun pentru când începe să ți se facă somn și te bagă în priză să rămâi sufletul petrecerii.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Tsunami</h4>
+              <p class="card-subtitle mb-2 text-dark">15 lei</p>
+              <p class="card-text">Tsunami este un shot pe care nu vrei să-l ratezi. Se prepară amestecând lichior de
+                cireșe, de vișine și frișcă. Acest shot este perfect pentru când tu și prietenii tăi v-ați săturat de
+                dansat și doriși să schimbați puțin atmosfera.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-4 text-center">
+          <img class="img-fluid mb-5" src="materiale/meniu/limonada.jpg"
+            alt=" Un borcan decorativ plin cu Limonada Curcubeu, cu 2 paie în el și o lămâie decorativă">
+          <h3>Răcoritoare</h3>
+          <br>
+        </div>
+        <div class="row d-flex justify-content-evenly">
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Mojito</h4>
+              <p class="card-subtitle mb-2 text-dark">7 lei</p>
+              <p class="card-text">Mojito este un cocktail tradițional cubanez care se prepară din rum alb, lime, zahăr și
+                apă minerală. Mojito este unul dintre cele mai populare cocktailuri din lume, fiind apreciat pentru
+                aromele sale răcoritoare și delicioase.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Fresh de portocale</h4>
+              <p class="card-subtitle mb-2 text-dark">7 lei</p>
+              <p class="card-text">Fresh-ul de portocale este o băutură preparată din suc de portocale proaspăt
+                stors. Această băutură e numai bună pentru când vrei să iei o pauză de la alcool, ca să revii cu forțe
+                proaspete înapoi pe ringul de dans.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-12 mx-2 my-2 border border-warning bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">Limonada Curcubeu</h4>
+              <p class="card-subtitle text-dark">7 lei</p>
+              <p class="card-text">Limonada este o băutură răcoritoare preparată din suc de lămâie, apă și zahăr. Limonada
+                este adesea îndulcită cu sirop de zahăr sau miere, pentru a-i adăuga un plus de dulceață. Ea este o
+                băutură versatilă, care poate fi băută în orice perioadă a zilei.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Contact -->
+
+
+    <div class="container" id="contact">
+      <div class="row align-items-center mx-5 py-5 ">
+        <div class="col-12">
+          <hr>
+          <h2 class="text-center mt-5 mb-3 ">
+            Contact
+          </h2>
+          <p class="lead text-center">
+            E-mail: zeusbar@gmail.com
+          </p>
+          <p class="lead text-center">
+            Telefon: 0748934526
+          </p>
+          <p class="lead text-center">
+            Adresă: Löwenstrasse 9, 8953 Dietikon, Switzerland
+          </p>
+        </div>
+        <div class="col-12">
+          <div class="mapouter">
+            <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+                marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=500&amp;height=500&amp;hl=en&amp;q=zeusbar&amp;t=p&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                href="https://mcpedls.com/">Minecraft Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+
+
+    <footer class="mt-5 mb-0 bg-dark">
+      <div class="container-fluid text-white bg-dark">
+        <div class=" row d-flex justify-content-between pt-3">
+          <div class="col-lg-4 col-12">
+            <p class="text-light text-center mx-0 my-0">
+              E-mail: zeusbar@gmail.com
+            </p>
+            <p class="text-light text-center">
+              Telefon: 0748934526
+            </p>
+          </div>
+          <div class="col-lg-4 col-12 text-center mx-0 my-0">
+            <p class="text-muted">
+              ©Zeusbar Company 2022
+            </p>
+          </div>
+          <ul class="col-lg-4 col-12 justify-content-center list-unstyled d-flex ">
+            <li class="me-3">
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="../tema3/materiale/icons/facebook.png" alt="logo facebook">
+              </a>
+            </li>
+            <li class="me-3">
+              <a href="https://youtube.com/" target="_blank">
+                <img class="align-self-center" src="../tema3/materiale/icons/youtube.png" alt="logo youtube">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img src="../tema3/materiale/icons/instagram.png" alt="logo instagram">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- Javascript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+  </body>
+
+</html>
